@@ -1,5 +1,5 @@
 name: Docker Swarm
-description: Corso introduttivo sull'orchestrazione di container con Docker Swarm
+description: Corso introduttivo sull'orchestrazione di container
 
 #
 # Flags below are optional
