@@ -61,11 +61,16 @@ In questa prima sessione vedremo quali sono le caratteristiche (in termini di fu
 - [Docker Swarm Standalone](https://github.com/docker/swarm)
 - [Raft](http://thesecretlivesofdata.com/raft/)
 - [SwarmKit](https://github.com/docker/swarmkit)
-- [Swarm Mode](https://docs.docker.com/engine/swarm/)
 
 ### Seconda sessione
 
 **Funzionalità di Docker Swarm** Con un recap iniziale, ripercorreremo tutti i concetti visti finora, step-by-step, per avviare i servizi con Docker Swarm e per valutarne il funzionamento. Vedremo come utilizzare la funzionalità di deploy specifica per Swarm e le logiche di scheduling e networking.
+
+#### Materiali
+
+- [Swarm Mode](https://docs.docker.com/engine/swarm/)
+- [Example App](https://github.com/docker/example-voting-app)
+- [Compose file format](https://docs.docker.com/compose/compose-file/)
 
 ### Terza sessione
 
