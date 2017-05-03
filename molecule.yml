@@ -1,0 +1,31 @@
+---
+ansible:
+  playbook: playbook.yml
+  host_key_checking: False
+  raw_ssh_args:
+    - -o UserKnownHostsFile=/dev/null
+    - -o IdentitiesOnly=yes
+    - -o ControlMaster=auto
+    - -o ControlPersist=60s
+driver:
+  name: openstack
+openstack:
+  instances:
+    - name: ansible-dockerswarm-manager
+      image: 'GNU/Linux Ubuntu Server 16.04 Xenial Xerus x64'
+      flavor: e3standard.x3
+      sshuser: ubuntu
+      security_groups: DemoSecGrp
+      ssh_timeout: 240
+      ansible_groups:
+        - docker_engine
+        - docker_swarm_manager
+    - name: ansible-dockerswarm-worker
+      image: 'GNU/Linux Ubuntu Server 16.04 Xenial Xerus x64'
+      flavor: e3standard.x3
+      sshuser: ubuntu
+      security_groups: DemoSecGrp
+      ssh_timeout: 240
+      ansible_groups:
+        - docker_engine
+        - docker_swarm_worker

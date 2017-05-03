@@ -1,0 +1,46 @@
+---
+
+- name: Create the network
+  os_network: 
+    name: "DemoNetwork"
+    state: present
+  register: demo_network
+  
+- name: Create the subnet
+  os_subnet:
+    name: "DemoSubnet"
+    network_name: "{{ demo_network.network.name }}"
+    cidr: "192.168.200.0/24"
+    dns_nameservers:
+       - 8.8.8.8
+       - 8.8.4.4
+    state: present
+
+- name: Create the router
+  os_router:
+    name: "DemoRouter"
+    network: "PublicNetwork"
+    interfaces: [ "DemoSubnet" ]
+    state: present
+
+- name: Create the security group
+  os_security_group:
+    name: "DemoSecGrp"
+    description: "Security group"
+    state: present
+
+- name: Allow all TCP ports
+  os_security_group_rule:
+    security_group: "DemoSecGrp"
+    protocol: tcp
+    port_range_min: 1
+    port_range_max: 65535
+    remote_ip_prefix: 0.0.0.0/0
+
+- name: Allow all UDP ports
+  os_security_group_rule:
+    security_group: "DemoSecGrp"
+    protocol: udp
+    port_range_min: 1
+    port_range_max: 65535
+    remote_ip_prefix: 0.0.0.0/0
