@@ -78,5 +78,6 @@ In questa prima sessione vedremo quali sono le caratteristiche (in termini di fu
 
 - [Deploy services to a Swarm](https://docs.docker.com/engine/swarm/services/)
 - [Deploy Configuration](https://docs.docker.com/compose/compose-file/#deploy)
+- [Ingress Network](https://docs.docker.com/engine/swarm/ingress/)
 - [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/#simple-example-get-started-with-secrets)
 
