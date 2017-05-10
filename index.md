@@ -75,3 +75,8 @@ In questa prima sessione vedremo quali sono le caratteristiche (in termini di fu
 ### Terza sessione
 
 **Docker per la produzione.** In questa terza sessione, dopo il classico recap iniziale, vedremo come amministrare un cluster Docker affrontando problematiche legate all'alta affidabilità e alla sicurezza, necessarie per la produzione. Insieme proveremo una delle ultime funzionalità introdotte per la gestione dei secrets.
+
+- [Deploy services to a Swarm](https://docs.docker.com/engine/swarm/services/)
+- [Deploy Configuration](https://docs.docker.com/compose/compose-file/#deploy)
+- [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/#simple-example-get-started-with-secrets)
+
